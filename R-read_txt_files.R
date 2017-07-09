@@ -10,25 +10,29 @@
 setwd("~/5minutes2explain")
 
 
-## Section:
+## Section: tab sep
 ##################################################
 data_B <- read.csv("data/data_B_TAB.txt", header=T, dec=".",sep="\t", row.names = "ID")
 
-## Section:
-##################################################
-data_A <- read.csv2("data/data_A.csv",
-                   header = TRUE,
-                   dec = ".",
-                   row.names = c("FLAVIO", "ANDREA", "GUILHERME", "HANNAH"),
-                   col.names= c("EMP_ID", "DIG", "SALARY_GROSS"),
-                   stringsAsFactors=TRUE)
 
-## Section:
+## Section: Read text file from Web
+##          different missing values 
 ##################################################
-dados <- read.csv(
-  file = "https://raw.githubusercontent.com/flaviobrito/dataudit/master/dados/Hospital.csv",
-  sep = ";",
+data_A <- read.csv(
+  file = "https://github.com/flaviobrito/5minutes2explain/raw/master/data/data_A.csv",
+  sep = ",",
+  header = TRUE,
   stringsAsFactors = FALSE,
   na.strings = c("", " ")
 )  
 
+
+## Section: Alter columns names, create row names
+##################################################
+data_A_new <- read.csv2("data/data_A.csv",
+                    header = TRUE,
+                    dec = ".",
+                    sep=",",
+                    row.names = c("Employee_A", "Employee_B", "Employee_C", "Employee_D"),
+                    col.names= c("EMP_ID", "DIG", "SALARY_GROSS"),
+                    stringsAsFactors=TRUE)
