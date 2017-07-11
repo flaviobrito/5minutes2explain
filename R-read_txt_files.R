@@ -12,24 +12,31 @@ setwd("~/5minutes2explain")
 
 ## Section: tab sep
 ##################################################
-data_B <- read.csv("data/data_B_TAB.txt", header=T, dec=".",sep="\t", row.names = "ID")
+file_name <- "data/data_B_TAB.txt"
+data_B <- read.csv(file_name,       #the name of the file
+                   header=TRUE,     #the file contains the variables' names as its 1st line
+                   dec=".",         #decimal points  --> .
+                   sep="\t",        #the field separator character --> tab
+                   row.names = "ID")#variable which contains the row names 
 
 
 ## Section: Read text file from Web
 ##          different missing values 
 ##################################################
+file_url <- "https://github.com/flaviobrito/5minutes2explain/raw/master/data/data_A.csv"
 data_A <- read.csv(
-  file = "https://github.com/flaviobrito/5minutes2explain/raw/master/data/data_A.csv",
-  sep = ",",
-  header = TRUE,
-  stringsAsFactors = FALSE,
-  na.strings = c("", " ")
-)  
+                  file = file_url,#the name of the file
+                  sep = ",",      #the field separator character --> comma
+                  header = TRUE,  #file has variable header 
+                  stringsAsFactors = FALSE,#character vectors be converted to factors
+                  na.strings = c("", " ") #vector of strings --> NA values
+                )  
 
 
 ## Section: Alter columns names, create row names
 ##################################################
-data_A_new <- read.csv2("data/data_A.csv",
+file_name <- "data/data_A.csv"
+data_A_new <- read.csv2(file_name,
                     header = TRUE,
                     dec = ".",
                     sep=",",
