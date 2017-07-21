@@ -1,10 +1,6 @@
 ##################################################
 ## Project: 5minutes2explain
-<<<<<<< HEAD
 ## Script purpose: Data manipulation using dplyr
-=======
-## Script purpose: Managing Data frames using dplyr
->>>>>>> 23b631f1349b9b794cddc9f351414491ddeed9ce
 ## Author: Flávio Brito
 ##################################################
 
