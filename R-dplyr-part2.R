@@ -1,17 +1,15 @@
 ##################################################
 ## Project: 5minutes2explain
-## Script purpose: Managing Data frames using dplyr
+## Script purpose: Data manipulation using dplyr
 ## Author: Flávio Brito
 ##################################################
 
 #Install packages
-install.packages("dplyr")
+#install.packages("dplyr")
 
 #load libraries
 library(dplyr)
 
-#load data set
-data(iris)
 
 ## Section: Using the filter() function 
 ##################################################

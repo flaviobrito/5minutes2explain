@@ -1,17 +1,14 @@
 ##################################################
 ## Project: 5minutes2explain
-## Script purpose: Managing Data frames using dplyr
+## Script purpose: Data manipulation using dplyr
 ## Author: Flávio Brito
 ##################################################
-
 #Install packages
 install.packages("dplyr")
 
 #load libraries
 library(dplyr)
 
-#load data set
-data(iris)
 
 ## Section: Using the rename() function 
 ##################################################
@@ -19,6 +16,8 @@ data(iris)
 new_iris <- rename(iris, 
                    Sepal_Length = Sepal.Length, 
                    Sepal_Width  = Sepal.Width)
+
+str(new_iris)
 
 ## Section: Using the mutate() function 
 ##################################################
@@ -45,6 +44,12 @@ summarise(
   weight_mean = mean(weight, na.rm = TRUE),
   weight_sd = sd(weight, na.rm = TRUE)
 )
+
+
+
+
+
+
 
 
 

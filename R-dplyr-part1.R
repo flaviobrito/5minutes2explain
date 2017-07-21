@@ -1,24 +1,25 @@
 ##################################################
 ## Project: 5minutes2explain
+<<<<<<< HEAD
+## Script purpose: Data manipulation using dplyr
+=======
 ## Script purpose: Managing Data frames using dplyr
+>>>>>>> 23b631f1349b9b794cddc9f351414491ddeed9ce
 ## Author: Flávio Brito
 ##################################################
 
 #Install packages
-install.packages("dplyr")
+#install.packages("dplyr")
 
 #load libraries
 library(dplyr)
 
-## Section: Discover data frame structure
 ##################################################
 data(iris) #load data set
 
 str(iris) #show the df structure
 
 names(iris) #list column names
-
-names(iris)[3:5] #specify column number
 
 
 ## Section: Using the select() function
